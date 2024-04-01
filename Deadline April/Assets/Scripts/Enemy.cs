@@ -35,8 +35,10 @@ public class Enemy : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.tag == "Player"){
             collision.gameObject.SetActive(false);
+            GameManager.instance.EnemySkillPlayer();
         }
         if(collision.tag == "Bullet"){
+            GameManager.instance.AddScore(1);
             Destroy(gameObject);
         }
 
