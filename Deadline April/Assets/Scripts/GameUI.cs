@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameUI : MonoBehaviour
 {
@@ -18,5 +19,9 @@ public class GameUI : MonoBehaviour
     {
         Score.SetText(GameManager.instance.GetScore().ToString());
         HighScore.SetText(GameManager.instance.GetScore().ToString());
+    }
+
+    public void Menu(){
+        SceneManager.LoadScene("Menu");
     }
 }

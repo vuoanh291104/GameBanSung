@@ -138,7 +138,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &135633048
 RectTransform:
   m_ObjectHideFlags: 0
@@ -320,8 +320,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e40cd0d30ff4dda49a46ef36f0fb135b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameOverScreen: {fileID: 0}
-  ScoreObject: {fileID: 0}
+  GameOverScreen: {fileID: 135633047}
+  ScoreObject: {fileID: 1035436486}
 --- !u!4 &401491789
 Transform:
   m_ObjectHideFlags: 0
@@ -529,8 +529,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3ac31219d214bc46ad1a23955261190, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Score: {fileID: 0}
-  HighScore: {fileID: 0}
+  Score: {fileID: 1035436488}
+  HighScore: {fileID: 824408587}
 --- !u!114 &731416361
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -783,7 +783,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -6, y: 427}
+  m_AnchoredPosition: {x: -6, y: 460}
   m_SizeDelta: {x: 301.7, y: 77}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1035436488
@@ -1278,7 +1278,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1233155478}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 731416360}
+        m_TargetAssemblyTypeName: GameUI, Assembly-CSharp
+        m_MethodName: Menu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1233155478
 MonoBehaviour:
   m_ObjectHideFlags: 0
