@@ -164,3 +164,4 @@ MonoBehaviour:
   speed: 10
   lifeTime: 2
   rb: {fileID: 8353955364086287484}
+  Effect: {fileID: 4592162687939038390, guid: 4b60bf7b6b3d70141be2346950e02ff6, type: 3}
