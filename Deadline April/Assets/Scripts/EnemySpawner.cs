@@ -9,7 +9,8 @@ public class EnemySpawner : MonoBehaviour
     public float spwanRate= 2f;
     public float spwanRadius= 5f;
     private float spwanTimer= 0f;
-    private float times=0f;
+    private float times = 0f;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -21,15 +22,21 @@ public class EnemySpawner : MonoBehaviour
     {
         if(!GameManager.instance.GameOver()){
             spwanTimer+= Time.deltaTime;
-            times +=Time.deltaTime;
+            times += Time.deltaTime;
             if(spwanTimer >= spwanRate){
-                if(times <10f){
-                    spwanEnemy();
+                if(times <15f){
+                    spwanEnemy(1);
+                    
+                }else if( times  >=40f){
+                    spwanEnemy(3);
+                    
                 }
                 else{
-                    spamEnermy();
+                    spwanEnemy(2);
+                    
                 }
                 spwanTimer=0;
+                
                
             }
             
@@ -42,13 +49,9 @@ public class EnemySpawner : MonoBehaviour
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, spwanRadius);
     }
-    void spwanEnemy(){
-        Vector2 randomPosition= (Vector2)transform.position + Random.insideUnitCircle.normalized* spwanRadius;
-        Instantiate(enemyPrefabs,randomPosition,Quaternion.identity);
-        
-    }
-    void spamEnermy(){
-        for(int i=0; i<2; i++){
+    
+    void spwanEnemy(int n){
+        for(int i=0; i<n; i++){
             Vector2 randomPosition= (Vector2)transform.position + Random.insideUnitCircle.normalized* spwanRadius;
             Instantiate(enemyPrefabs,randomPosition,Quaternion.identity);
         }
