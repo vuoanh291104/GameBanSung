@@ -1,7 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.ShortcutManagement;
+// using UnityEditor.ShortcutManagement;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Camera mainCamera;
     public GameObject bulletPrefabs;
     public Transform firePoint;
-    public float fireRate= 0.5f;
+    public float fireRate= 0.2f;
     private float nextFireTime;
     void Start()
     {
